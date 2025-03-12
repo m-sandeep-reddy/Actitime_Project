@@ -1,0 +1,16 @@
+
+<suite name="Suite" >
+
+  <test thread-count="2" name="Test1">
+    <classes>
+      <class name="com.acttime.testscript.Customer_Module"/>
+     </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="2" name="Test2">
+    <classes>
+      
+      <class name="com.acttime.testscript.Project_Module"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

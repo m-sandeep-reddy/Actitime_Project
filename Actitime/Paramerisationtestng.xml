@@ -1,0 +1,23 @@
+<suite name="Suite" parallel = "tests">
+
+<parameter name = "url" value = "http://localhost/login.do"/>
+
+  <test thread-count="5" name="Test1">
+  <parameter name = "browser" value = "chrome"/>
+  <parameter name = "un" value = "admin"/>
+  <parameter name = "pwd" value = "manager"/>
+    <classes>
+      <class name="com.acttime.testscript.Parameterization"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="Test2">
+  <parameter name = "browser" value = "edge"/>
+  <parameter name = "un" value = "sandeep"/>
+  <parameter name = "pwd" value = "reddy"/>
+    <classes>
+      <class name="com.acttime.testscript.Parameterization"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
