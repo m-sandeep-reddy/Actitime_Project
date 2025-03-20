@@ -26,18 +26,15 @@ public class Data_Provider {
 	public void demo(String un,String pwd) throws InterruptedException
 	{
 		WebDriver d = new ChromeDriver();
-		//d.get("http://localhost/login.do");
+		d.get("http://localhost/login.do");
 		d.manage().window().maximize();
 		d.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		/*d.findElement(By.id("username")).sendKeys(un);
+		d.findElement(By.id("username")).sendKeys(un);
 		//Thread.sleep(3000);
 		d.findElement(By.name("pwd")).sendKeys(pwd+Keys.ENTER);
 		Thread.sleep(1000);
-		d.quit();*/
-		d.get("https://event-management-three-lac.vercel.app/");
-		d.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys(un);
-		d.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(pwd);
-		d.findElement(By.xpath("//button[text()='Login']")).click();
+		d.quit();
+		
 	}
 
 }
