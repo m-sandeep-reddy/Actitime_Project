@@ -3,16 +3,37 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.actitime.testscript.Users_Module">
+      <class name="com.actitime.testscript.Tasks_Module">
         <methods>
-          <include name="testModifyUser"/>
+          <include name="testDeleteTasks"/>
           <include name="login"/>
           <include name="openBrowser"/>
           <include name="closeBrowser"/>
           <include name="logout"/>
-          <include name="testDeleteUser"/>
+          <include name="testCreateTasks"/>
         </methods>
-      </class> <!-- com.actitime.testscript.Users_Module -->
+      </class> <!-- com.actitime.testscript.Tasks_Module -->
+      <class name="com.actitime.testscript.Customer_Module">
+        <methods>
+          <include name="testDeleteCustomer"/>
+          <include name="testModifyCustomerStatus"/>
+          <include name="login"/>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="testCreateCustomer"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- com.actitime.testscript.Customer_Module -->
+      <class name="com.actitime.testscript.Project_Module">
+        <methods>
+          <include name="login"/>
+          <include name="testCreateProject"/>
+          <include name="testDeleteProject"/>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- com.actitime.testscript.Project_Module -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

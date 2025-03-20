@@ -34,7 +34,7 @@ public class Project_Module extends Base_Class{
 		Reporter.log("delete project",true);
 	}*/
 	
-	@Test(invocationCount = 1 ,priority = 1)
+	@Test(invocationCount = 1 ,priority = 1 , dependsOnMethods = "com.actitime.testscript.Customer_Module.testCreateCustomer")
 	public void testCreateProject() throws EncryptedDocumentException, IOException, InterruptedException
 	{
 		Reporter.log("Create Project",true);
@@ -58,7 +58,7 @@ public class Project_Module extends Base_Class{
 		Assert.assertEquals(expProjectName , actProjectName);
 	}
 	
-	@Test(invocationCount = 0 , priority = 2)
+	@Test(invocationCount = 1 , dependsOnMethods = "com.actitime.testscript.Tasks_Module.testDeleteTasks")
 	public void testDeleteProject() throws InterruptedException
 	{
 		Reporter.log("Delete Project",true);

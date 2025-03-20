@@ -16,7 +16,7 @@ import com.actitime.pom.Time_Track_Page;
 @Listeners(com.actitime.generic.Listener_Implementation.class)
 public class Tasks_Module extends Base_Class{
 	
-	@Test(invocationCount = 1 , priority = 1)
+	@Test(invocationCount = 1 , priority = 1 , dependsOnMethods = {"com.actitime.testscript.Customer_Module.testCreateCustomer","com.actitime.testscript.Project_Module.testCreateProject"})
 	public void testCreateTasks() throws EncryptedDocumentException, IOException, InterruptedException
 	{
 		Reporter.log("Create Tasks",true);
@@ -63,7 +63,7 @@ public class Tasks_Module extends Base_Class{
 		Thread.sleep(2000);
 	}
 	
-	@Test(invocationCount = 1 , priority = 2)
+	@Test(invocationCount = 1 , priority = 2 , dependsOnMethods = "testCreateTasks")
 	public void testDeleteTasks() throws EncryptedDocumentException, IOException, InterruptedException
 	{
 		Reporter.log("delete Tasks",true);

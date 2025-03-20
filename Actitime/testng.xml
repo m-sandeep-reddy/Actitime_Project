@@ -2,8 +2,12 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.acttime.testscript.Customer_Module"/>
-      <class name="com.acttime.testscript.Project_Module"/>
+      <class name="com.actitime.testscript.Reports_Module"/>
+      <class name="com.actitime.testscript.Users_Module"/>
+      <class name="com.actitime.testscript.Customer_Module"/>
+      <class name="com.actitime.testscript.Project_Module"/>
+      <class name="com.actitime.testscript.Theme_Module"/>
+      <class name="com.actitime.testscript.Tasks_Module"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

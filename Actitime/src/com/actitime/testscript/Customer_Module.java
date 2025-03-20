@@ -1,3 +1,4 @@
+
 package com.actitime.testscript;
 
 import java.io.IOException;
@@ -19,24 +20,6 @@ import com.actitime.pom.Tasks_Page;
 
 @Listeners(com.actitime.generic.Listener_Implementation.class)
 public class Customer_Module extends Base_Class {
-	
-	/*@Test
-	public void testCreateCustomer()
-	{
-		Reporter.log("create custoemer",true);
-	}
-	
-	@Test
-	public void testModifyCustomer()
-	{
-		Reporter.log("Modify custoemer",true);
-	}
-	
-	@Test
-	public void testDeleteCustomer()
-	{
-		Reporter.log("Delete custoemer",true);
-	}*/
 	
 	@Test(invocationCount = 1 , priority = 1)
 	public void testCreateCustomer() throws InterruptedException, EncryptedDocumentException, IOException
@@ -61,11 +44,10 @@ public class Customer_Module extends Base_Class {
 		Thread.sleep(2000);
 		
 		String expCustomerName = t.getExpCustomerName().getText();
-		
 		Assert.assertEquals(expCustomerName , actCustomerNmae);
 		}
 	
-	@Test(invocationCount = 1 , priority = 3)
+	@Test(invocationCount = 1 , priority = 3 , dependsOnMethods = "com.actitime.testscript.Project_Module.testDeleteProject")
 	public void testDeleteCustomer() throws InterruptedException
 	{
 		Reporter.log("Delete Customer",true);
